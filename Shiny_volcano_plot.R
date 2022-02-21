@@ -1,4 +1,11 @@
-#setwd("~/LocalPedagoNGS/Volcano_plot/")
+#####################################################################
+## PROJECT : Volcano plot                                          ##
+## STUDIES : KisSplice                                             ##
+## AUTHOR : Victor Deguise                                         ##
+## DATE : February 2022                                            ##
+## SCRIPT : R script shiny volcano plot                            ##
+#####################################################################
+
 library(shiny)
 library (ggplot2)
 library(plotly)
@@ -56,7 +63,7 @@ server <- function(input, output){
   
   #read in the table as a function of the select input
   dataFrame <- reactive({
-    filename <- paste0("../kissDE_results/kissDE_",input$inputFile,"_kissplice_1.tab")
+    filename <- paste0("Data/kissDE_",input$inputFile,"_kissplice_1.tab")
     data <- read.csv(file=filename, sep='\t')
     colnames(data) <- c("Gene_Id",	"Gene_Name","Chromosome_and_genomic_position","Strand",	"Event_type","Variable_part_length",	
                              "Frameshift_?"	,"CDS_?"	,"Gene_biotype","number_of_known_splice_sites/number_of_SNPs",	
