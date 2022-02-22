@@ -15,5 +15,5 @@ R and the following R packages should be installed:
 
 After cloning the github repository, open the Shiny_volcano_plot.R script in RStudio. 
 Then, click on the “Run App” button on the upper right corner of the text editor. The Shiny App will load.
-To visualize your results, you can add your kissDE results in Data folder and go to line 28 and 66 to modify the script to add your file with your filename.
+To visualize your results, you can add your kissDE results in Data folder and go to line 28 and 72 to modify the script to add your file with your filename.
 Your file must be in kissDE output format.
