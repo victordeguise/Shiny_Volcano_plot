@@ -122,10 +122,10 @@ server <- function(input, output) {
       "DOWN"
     data$diffexpressed[data$dPSI > input$deltaPSI &
                          data$adjusted_pvalue < input$padj &
-                         data$`CDS_?` == "True"] <- "CDS_UP"
+                         data$`CDS_?` %in% c("True","Yes")] <- "CDS_UP"
     data$diffexpressed[data$dPSI < -input$deltaPSI &
                          data$adjusted_pvalue < input$padj &
-                         data$`CDS_?` == "True"] <- "CDS_DOWN"
+                         data$`CDS_?` %in% c("True", "Yes")] <- "CDS_DOWN"
     
     # Event type choice, default : ALL events
     if (!("ALL" %in% input$eventType)) {
